@@ -1,4 +1,4 @@
-### NC vs SC population growth
+### NC vs SC Population Growth
 A web scraping project comparing population growth in North and South Carolina
 * Wikipedia was selected due to its scraping policy and data availability
 
