@@ -1,14 +1,17 @@
-NC vs SC population growth: A webcraping project comparing population grown in North and South Carolina
-Wikipedia was selected due to its scraping policy and data avaiability
+### NC vs SC population growth
+A web scraping project comparing population grown in North and South Carolina
+* Wikipedia was selected due to its scraping policy and data availability
 While this project leverages the foundational scraping techniques from the IBM Data Science Professional Certificate, it extends the scope by performing multi-source data merging and implementing a custom cleaning pipeline to handle real-world Wikipedia HTML inconsistencies.
 
-Tools Used: 
+🛠️ Tools Used: 
 * Data Handling: Pandas, NumPy
 * Web Scraping: BeautifulSoup4, Requests
 * Visualization: Seaborn, Matplotlib
 
-🛠️ Technical Highlights: Used BeautifulSoup to responsibly scrape data from Wikipedia, manually built dataframes from html, designed dataframe cleaning function 
-
+🚩 Technical Challenges:
+* Non-numeric Characters - Implemented Regex (\D) to strip Wikipedia citation brackets (e.g., [1]) from years and populations.
+* Inconsistent Dash Types - Identified and handled the dash (—) in the first row of census data to prevent float conversion errors.
+* Idempotent Pipeline - Built a cleaning function that checks dtypes before processing, allowing the notebook to be re-run without errors.
 
 
 ![](images/nc_sc_population_growth.png)
